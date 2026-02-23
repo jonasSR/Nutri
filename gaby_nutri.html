@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaby Maia • Nutricionista</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="rodape.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Gaby <span>Maia</span></div>
+  <button class="nav-cta" data-whatsapp="nav" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Agendar Consulta</button>
+</nav>
+<nav>
+  <div class="nav-logo">Gaby <span>Maia</span></div>
+  <div class="nav-actions">
+    <a class="nav-loja" href="loja.html">🛍 Loja</a>
+    <button class="nav-cta" data-whatsapp="nav" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Agendar Consulta</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Nutrição Funcional & Comportamental</div>
+    <h1 class="hero-title">
+      Seu corpo merece<br>
+      uma nutrição<br>
+      <em>feita pra você</em>
+    </h1>
+    <p class="hero-subtitle">
+      Chega de dietas genéricas. Aqui o plano é 100% personalizado para sua rotina, seus objetivos e o seu corpo.
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" data-whatsapp="hero" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Quero começar agora</button>
+      <button class="btn-ghost" onclick="document.getElementById('como-funciona').scrollIntoView({behavior:'smooth'})">Como funciona</button>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">+500<span>.</span></div>
+        <div class="stat-label">Pacientes atendidos</div>
+      </div>
+      <div>
+        <div class="stat-num">97<span>%</span></div>
+        <div class="stat-label">Taxa de satisfação</div>
+      </div>
+      <div>
+        <div class="stat-num">5<span>★</span></div>
+        <div class="stat-label">Avaliação média</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-blob"></div>
+    <div class="hero-image-wrapper">
+      <div class="hero-image-circle">
+        <div class="hero-image-placeholder">
+          <span class="icon">🌿</span>
+          <p>Foto da Gaby aqui</p>
+        </div>
+      </div>
+
+      <div class="floating-card floating-card-1">
+        <div class="fc-label">Próxima consulta</div>
+        <div class="fc-value">Hoje, 15h</div>
+        <div class="fc-sub">✓ Confirmada</div>
+      </div>
+
+      <div class="floating-card floating-card-2">
+        <div class="fc-label">Meta atingida</div>
+        <div class="fc-value">-8 kg</div>
+        <div class="fc-sub">em 3 meses 🎉</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE / INSTITUCIONAL -->
+<section class="section sobre-section" id="sobre">
+  <div class="sobre-grid reveal">
+
+    <!-- LADO ESQUERDO: FOTOS -->
+    <div class="sobre-fotos">
+      <div class="foto-principal">
+        <div class="foto-placeholder">
+          <span>🌿</span>
+          <p>Foto profissional<br>da Gaby</p>
+        </div>
+      </div>
+      <div class="foto-secundaria">
+        <div class="foto-placeholder small">
+          <span>📸</span>
+          <p>Foto 2</p>
+        </div>
+      </div>
+      <div class="sobre-badge">
+        <div class="badge-num">8+</div>
+        <div class="badge-label">anos de experiência</div>
+      </div>
+    </div>
+
+    <!-- LADO DIREITO: CONTEÚDO -->
+    <div class="sobre-conteudo">
+      <div class="section-tag">Quem é a Gaby</div>
+      <h2 class="section-title">
+        Nutrição que vai além<br>
+        do <em>cardápio</em>
+      </h2>
+      <p class="sobre-bio">
+        Sou a Gabrielle Maia, nutricionista apaixonada por transformar a relação das pessoas com a alimentação. Acredito que comer bem não é sobre restrição — é sobre liberdade, prazer e saúde de verdade.
+      </p>
+
+      <!-- FORMAÇÃO -->
+      <div class="sobre-cards">
+        <div class="sobre-card">
+          <div class="sobre-card-icon">🎓</div>
+          <div>
+            <div class="sobre-card-title">Graduação</div>
+            <div class="sobre-card-desc">Nutrição — Universidade XYZ (2016)</div>
+          </div>
+        </div>
+        <div class="sobre-card">
+          <div class="sobre-card-icon">🔬</div>
+          <div>
+            <div class="sobre-card-title">Especialização</div>
+            <div class="sobre-card-desc">Nutrição Funcional & Comportamental</div>
+          </div>
+        </div>
+        <div class="sobre-card">
+          <div class="sobre-card-icon">🏅</div>
+          <div>
+            <div class="sobre-card-title">Especialização</div>
+            <div class="sobre-card-desc">Nutrição Esportiva — Instituto ABC</div>
+          </div>
+        </div>
+        <div class="sobre-card">
+          <div class="sobre-card-icon">📋</div>
+          <div>
+            <div class="sobre-card-title">Registro Profissional</div>
+            <div class="sobre-card-desc">CRN-3 · Nº 00000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" id="como-funciona">
+  <div class="reveal">
+    <div class="section-tag">Processo</div>
+    <h2 class="section-title">Simples, <em>direto</em> e feito pra funcionar</h2>
+  </div>
+  <div class="steps reveal">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Anamnese Completa</h3>
+      <p>Antes da consulta você preenche um formulário completo. Assim chegamos preparados pra te ajudar de verdade, sem perder tempo.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Plano Personalizado</h3>
+      <p>Nada de cardápio genérico da internet. Cada plano é criado pensando na sua rotina, suas preferências e seus objetivos.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Acompanhamento Real</h3>
+      <p>Suporte contínuo pelo WhatsApp, retornos mensais e ajustes sempre que precisar. Você nunca fica sozinha nesse processo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testimonials-section">
+  <div class="reveal">
+    <div class="section-tag">Resultados reais</div>
+    <h2 class="section-title">Quem já transformou<br>a própria <em>saúde</em></h2>
+  </div>
+  <div class="testimonials-grid reveal">
+    <div class="testimonial">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Em 4 meses perdi 12kg sem passar fome e sem abandonar o que eu gosto de comer. A Gaby entende de verdade que alimentação faz parte da vida!"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩</div>
+        <div>
+          <div class="author-name">Ana Paula S.</div>
+          <div class="author-desc">Perdeu 12kg em 4 meses</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Nunca pensei que ia conseguir regularizar meu intestino e ainda melhorar minha energia no trabalho. O acompanhamento dela é incrível."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👨</div>
+        <div>
+          <div class="author-name">Ricardo M.</div>
+          <div class="author-desc">Mais energia e bem-estar</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Depois da gravidez eu estava perdida. A Gaby me ajudou a entender meu corpo e criar hábitos que duram. Recomendo muito!"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩</div>
+        <div>
+          <div class="author-name">Camila F.</div>
+          <div class="author-desc">Pós-parto com saúde</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section" id="contato">
+  <div class="reveal">
+    <div class="section-tag" style="display:inline-block;margin-bottom:1rem;">Comece hoje</div>
+    <h2 class="section-title">Pronta pra mudar sua<br>relação com a <em>alimentação?</em></h2>
+    <p class="section-subtitle">Agende sua consulta e dê o primeiro passo. Atendimento online e presencial disponível.</p>
+    <button class="btn-primary" data-whatsapp="cta" style="font-size:1rem;padding:1.1rem 2.8rem;" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Gostaria de agendar uma consulta.','_blank')">
+      💬 Falar com a Gaby agora
+    </button>
+  </div>
+</section>
+
+<!-- CHATBOT FAB -->
+<div class="chat-fab">
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-avatar">🌿</div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">Ana · Assistente da Gaby</div>
+        <div class="chat-header-status">Online agora</div>
+      </div>
+      <button class="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="quick-replies" id="quickReplies"></div>
+    <div class="chat-input-area">
+      <input class="chat-input" id="chatInput" placeholder="Digite sua mensagem..." onkeydown="if(event.key==='Enter') sendMessage()">
+      <button class="chat-send" onclick="sendMessage()">
+        <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <button class="chat-btn" data-whatsapp="chatbot" onclick="toggleChat()" id="chatBtnEl">
+    <div class="chat-avatar-btn" id="chatIconOpen">👩‍⚕️</div>
+    <div class="chat-avatar-btn" id="chatIconClose" style="display:none">✕</div>
+    <div class="chat-badge"></div>
+  </button>
+</div>
+
+<!-- RODAPÉ -->
+<footer class="footer">
+  <div class="footer-grid">
+
+    <!-- COLUNA 1: MARCA -->
+    <div class="footer-brand">
+      <div class="footer-logo">Gaby <span>Maia</span></div>
+      <p class="footer-desc">Nutrição funcional e comportamental para quem quer resultados reais e duradouros.</p>
+      <div class="footer-redes">
+        <a href="https://instagram.com/gaby_maianutri" target="_blank" class="footer-rede" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://wa.me/5500000000000" target="_blank" class="footer-rede" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- COLUNA 2: LINKS -->
+    <div class="footer-col">
+      <div class="footer-col-title">Navegação</div>
+      <ul class="footer-links">
+        <li><a href="#sobre">Sobre a Gaby</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#guia-gratis">Guia gratuito</a></li>
+        <li><a href="#contato">Agendar consulta</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUNA 3: ATENDIMENTO -->
+    <div class="footer-col">
+      <div class="footer-col-title">Atendimento</div>
+      <ul class="footer-links">
+        <li>📍 São Paulo — SP</li>
+        <li>💻 Online (Meet / Zoom)</li>
+        <li>⏰ Seg a Sex, 8h–18h</li>
+        <li><a href="mailto:contato@gabymaia.com.br">contato@gabymaia.com.br</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUNA 4: CTA -->
+    <div class="footer-col">
+      <div class="footer-col-title">Pronta pra começar?</div>
+      <p style="font-size:0.85rem;color:rgba(250,247,242,0.6);line-height:1.6;margin-bottom:1.2rem;">
+        Agende sua consulta e dê o primeiro passo rumo à sua saúde de verdade.
+      </p>
+      <button class="footer-btn" data-whatsapp="footer" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Gostaria de agendar uma consulta.','_blank')">
+        💬 Falar no WhatsApp
+      </button>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      © 2026 Gaby Maia Nutrição · CRN-3 Nº 00000
+    </div>
+    <div class="footer-bottom-right">
+      Desenvolvido com 💚 por <strong>NexoDigital</strong>
+    </div>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+<!-- Métricas -->
+<script src="metricas.js"></script>
+</script>
+</body>
+</html>

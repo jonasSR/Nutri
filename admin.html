@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Gaby Maia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #FAF7F2; --dark: #1A1612; --sage: #8A9E7B;
+    --sage-light: #C5D4BC; --terra: #C4785A; --muted: #8A7F78;
+  }
+  body { font-family: 'DM Sans', sans-serif; background: #F0EDE8; color: var(--dark); min-height: 100vh; padding: 2rem; }
+
+  .header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 2rem;
+  }
+  .header h1 { font-family: 'Playfair Display', serif; font-size: 1.8rem; }
+  .header h1 span { color: var(--sage); font-style: italic; }
+  .header-sub { font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem; }
+
+  .btn {
+    padding: 0.75rem 1.6rem; border-radius: 100px; border: none;
+    font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 500;
+    cursor: pointer; transition: all 0.25s;
+  }
+  .btn-primary { background: var(--sage); color: white; }
+  .btn-primary:hover { background: #5A7A50; transform: translateY(-1px); }
+  .btn-terra { background: var(--terra); color: white; }
+  .btn-terra:hover { background: #A85A3C; transform: translateY(-1px); }
+
+  /* CARDS */
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+
+  .card {
+    background: white; border-radius: 18px; padding: 1.5rem;
+    border-left: 4px solid var(--sage);
+    box-shadow: 0 4px 20px rgba(26,22,18,0.06);
+    transition: transform 0.2s;
+  }
+  .card:hover { transform: translateY(-3px); }
+  .card.terra { border-left-color: var(--terra); }
+
+  .card-emoji { font-size: 1.8rem; margin-bottom: 0.8rem; }
+  .card-valor { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--dark); line-height: 1; }
+  .card-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.4rem; }
+  .card-delta { font-size: 0.78rem; color: var(--sage); margin-top: 0.3rem; }
+
+  /* GRID INFERIOR */
+  .bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .panel { background: white; border-radius: 18px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(26,22,18,0.06); }
+  .panel-title {
+    font-size: 0.75rem; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.1em; margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem; border-bottom: 1px solid #F0EDE8;
+  }
+
+  /* ORIGENS */
+  .origem-row { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; }
+  .origem-nome { font-size: 0.85rem; width: 85px; flex-shrink: 0; }
+  .origem-track { flex: 1; height: 7px; background: #F0EDE8; border-radius: 100px; overflow: hidden; }
+  .origem-fill { height: 100%; background: linear-gradient(90deg, var(--sage), #5A7A50); border-radius: 100px; transition: width 0.8s ease; }
+  .origem-pct { font-size: 0.75rem; color: var(--muted); width: 32px; text-align: right; }
+
+  /* LEADS */
+  .lead-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.7rem 0; border-bottom: 1px solid #F0EDE8; font-size: 0.85rem;
+  }
+  .lead-row:last-child { border-bottom: none; }
+  .lead-nome { font-weight: 500; }
+  .lead-email { color: var(--muted); font-size: 0.78rem; margin-top: 0.1rem; }
+  .lead-data { font-size: 0.75rem; color: var(--muted); flex-shrink: 0; }
+  .lead-origem {
+    font-size: 0.68rem; padding: 0.2rem 0.6rem;
+    border-radius: 100px; background: var(--sage-light);
+    color: var(--dark); flex-shrink: 0;
+  }
+
+  /* TAXA */
+  .taxa-wrap { margin: 1rem 0; }
+  .taxa-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--terra); }
+  .taxa-sub { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+  .taxa-bar-track { height: 10px; background: #F0EDE8; border-radius: 100px; overflow: hidden; margin-top: 1rem; }
+  .taxa-bar-fill { height: 100%; background: linear-gradient(90deg, var(--sage), var(--terra)); border-radius: 100px; transition: width 1s ease; }
+
+  /* LOADING */
+  .loading { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.9rem; }
+
+  /* SELETOR DE PERÍODO */
+  .periodo-select {
+    border: 1.5px solid rgba(138,158,123,0.3); border-radius: 100px;
+    padding: 0.5rem 1rem; font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; color: var(--dark); background: white;
+    outline: none; cursor: pointer;
+  }
+
+  @media (max-width: 900px) {
+    .cards { grid-template-columns: 1fr 1fr; }
+    .bottom-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Painel <span>Gaby Maia</span></h1>
+    <div class="header-sub" id="data-atual">Carregando...</div>
+  </div>
+  <div style="display:flex;gap:0.8rem;align-items:center;">
+    <select class="periodo-select" id="periodo" onchange="carregarDados()">
+      <option value="7">Últimos 7 dias</option>
+      <option value="30">Últimos 30 dias</option>
+      <option value="semana">Semana passada</option>
+    </select>
+    <button class="btn btn-terra" id="btn-relatorio" onclick="gerarRelatorio()">📊 Gerar Relatório</button>
+  </div>
+</div>
+
+<!-- CARDS MÉTRICAS -->
+<div class="cards">
+  <div class="card">
+    <div class="card-emoji">👁</div>
+    <div class="card-valor" id="m-visitantes">—</div>
+    <div class="card-label">Visitantes</div>
+  </div>
+  <div class="card terra">
+    <div class="card-emoji">📥</div>
+    <div class="card-valor" id="m-leads">—</div>
+    <div class="card-label">Leads captados</div>
+  </div>
+  <div class="card">
+    <div class="card-emoji">💬</div>
+    <div class="card-valor" id="m-whatsapp">—</div>
+    <div class="card-label">Cliques WhatsApp</div>
+  </div>
+  <div class="card terra">
+    <div class="card-emoji">📅</div>
+    <div class="card-valor" id="m-agendamentos">—</div>
+    <div class="card-label">Agendamentos</div>
+  </div>
+</div>
+
+<!-- PAINÉIS -->
+<div class="bottom-grid">
+
+  <!-- ORIGENS + TAXA -->
+  <div class="panel">
+    <div class="panel-title">📊 Origem do tráfego</div>
+    <div id="origens-wrap"><div class="loading">Carregando...</div></div>
+
+    <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #F0EDE8;">
+      <div class="panel-title">🎯 Taxa de conversão</div>
+      <div class="taxa-wrap">
+        <div class="taxa-num" id="taxa-num">—%</div>
+        <div class="taxa-sub">visitantes que viraram leads</div>
+        <div class="taxa-bar-track"><div class="taxa-bar-fill" id="taxa-bar" style="width:0%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÚLTIMOS LEADS -->
+  <div class="panel">
+    <div class="panel-title">📋 Últimos leads captados</div>
+    <div id="leads-wrap"><div class="loading">Carregando...</div></div>
+  </div>
+
+</div>
+
+<!-- FIREBASE SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+<script>
+// ── FIREBASE CONFIG ──
+const firebaseConfig = {
+  apiKey:            "SUA_API_KEY",
+  authDomain:        "SEU_PROJETO.firebaseapp.com",
+  projectId:         "SEU_PROJETO",
+  storageBucket:     "SEU_PROJETO.appspot.com",
+  messagingSenderId: "SEU_SENDER_ID",
+  appId:             "SEU_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// ── UTILITÁRIOS ──
+function toDocId(date) { return date.toISOString().split('T')[0]; }
+
+function getDias(qtd) {
+  const dias = [];
+  for (let i = qtd - 1; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    dias.push(toDocId(d));
+  }
+  return dias;
+}
+
+function formatarDataBr(isoStr) {
+  const [y, m, d] = isoStr.split('-');
+  return `${d}/${m}`;
+}
+
+const labels = { instagram:'Instagram', google:'Google', direto:'Direto', facebook:'Facebook', whatsapp:'WhatsApp', outro:'Outros' };
+
+// ── CARREGAR DADOS ──
+async function carregarDados() {
+  const periodo = document.getElementById('periodo').value;
+  const qtdDias = periodo === 'semana' ? 7 : parseInt(periodo);
+  const dias    = getDias(qtdDias);
+
+  const totais = { visitantes:0, leads:0, cliques_whatsapp:0, agendamentos:0,
+    origens:{ instagram:0, google:0, direto:0, facebook:0, whatsapp:0, outro:0 } };
+
+  for (const dia of dias) {
+    try {
+      const snap = await db.collection('metricas').doc(dia).get();
+      if (!snap.exists) continue;
+      const d = snap.data();
+      totais.visitantes       += d.visitantes       || 0;
+      totais.leads            += d.leads            || 0;
+      totais.cliques_whatsapp += d.cliques_whatsapp || 0;
+      totais.agendamentos     += d.agendamentos     || 0;
+      for (const k of Object.keys(totais.origens)) {
+        totais.origens[k] += d[`origens.${k}`] || 0;
+      }
+    } catch(e) {}
+  }
+
+  // Atualizar cards
+  document.getElementById('m-visitantes').textContent   = totais.visitantes;
+  document.getElementById('m-leads').textContent        = totais.leads;
+  document.getElementById('m-whatsapp').textContent     = totais.cliques_whatsapp;
+  document.getElementById('m-agendamentos').textContent = totais.agendamentos;
+
+  // Taxa de conversão
+  const taxa = totais.visitantes > 0
+    ? ((totais.leads / totais.visitantes) * 100).toFixed(1)
+    : '0.0';
+  document.getElementById('taxa-num').textContent = `${taxa}%`;
+  document.getElementById('taxa-bar').style.width = `${Math.min(taxa, 100)}%`;
+
+  // Origens
+  const totalOrigens = Object.values(totais.origens).reduce((a,b) => a+b, 0) || 1;
+  const origensHTML = Object.entries(totais.origens)
+    .sort((a,b) => b[1]-a[1])
+    .map(([k, v]) => {
+      const pct = Math.round((v / totalOrigens) * 100);
+      return `<div class="origem-row">
+        <span class="origem-nome">${labels[k]}</span>
+        <div class="origem-track"><div class="origem-fill" style="width:${pct}%"></div></div>
+        <span class="origem-pct">${pct}%</span>
+      </div>`;
+    }).join('');
+  document.getElementById('origens-wrap').innerHTML = origensHTML || '<div class="loading">Sem dados</div>';
+
+  // Últimos leads
+  carregarLeads();
+}
+
+async function carregarLeads() {
+  try {
+    const snap = await db.collection('leads')
+      .orderBy('data', 'desc')
+      .limit(6)
+      .get();
+
+    if (snap.empty) {
+      document.getElementById('leads-wrap').innerHTML = '<div class="loading">Nenhum lead ainda</div>';
+      return;
+    }
+
+    const html = snap.docs.map(doc => {
+      const d = doc.data();
+      const data = d.dia || '—';
+      const origem = d.origem || 'outro';
+      return `<div class="lead-row">
+        <div>
+          <div class="lead-nome">${d.nome || 'Sem nome'}</div>
+          <div class="lead-email">${d.email || '—'}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+          <span class="lead-origem">${labels[origem] || origem}</span>
+          <span class="lead-data">${formatarDataBr(data)}</span>
+        </div>
+      </div>`;
+    }).join('');
+
+    document.getElementById('leads-wrap').innerHTML = html;
+  } catch(e) {
+    document.getElementById('leads-wrap').innerHTML = '<div class="loading">Erro ao carregar</div>';
+  }
+}
+
+// ── DATA ATUAL ──
+document.getElementById('data-atual').textContent =
+  new Date().toLocaleDateString('pt-BR', { weekday:'long', day:'2-digit', month:'long', year:'numeric' });
+
+// ── INICIAR ──
+carregarDados();
+</script>
+
+<!-- Script do relatório -->
+<script src="relatorio.js"></script>
+
+</body>
+</html>

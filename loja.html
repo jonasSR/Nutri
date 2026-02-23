@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loja · Gaby Maia Nutricionista</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="produtos.css" rel="stylesheet">
+<link href="rodape.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAV -->
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Gaby <span>Maia</span></div>
+  <a href="gaby_nutri.html" class="nav-voltar">← Voltar ao site</a>
+</nav>
+
+
+<!-- HERO DA LOJA -->
+<div class="loja-hero">
+  <div class="section-tag">Produtos indicados</div>
+  <h1>O que a Gaby <em>recomenda</em></h1>
+  <p>Produtos que fazem parte da rotina dos meus pacientes e que eu indico com confiança e base científica.</p>
+  <div class="loja-hero-divider"></div>
+</div>
+
+<!-- FILTROS -->
+<div class="loja-filtros">
+  <button class="filtro-btn active" onclick="filtrar('todos', this)">Todos</button>
+  <button class="filtro-btn" onclick="filtrar('proteina', this)">Proteína</button>
+  <button class="filtro-btn" onclick="filtrar('vitaminas', this)">Vitaminas</button>
+  <button class="filtro-btn" onclick="filtrar('recuperacao', this)">Recuperação</button>
+  <button class="filtro-btn" onclick="filtrar('energia', this)">Energia</button>
+</div>
+
+<!-- GRID DE PRODUTOS -->
+<div class="loja-grid">
+  <div class="produtos-grid" id="produtosGrid">
+
+    <div class="produto-card" data-cat="proteina">
+      <div class="produto-badge">Mais indicado</div>
+      <div class="produto-img">🥛</div>
+      <div class="produto-info">
+        <div class="produto-categoria">Proteína</div>
+        <div class="produto-nome">Whey Protein Isolado</div>
+        <div class="produto-desc">Ideal pós-treino. Alta absorção e baixo teor de lactose. Indicado para ganho de massa e recuperação muscular.</div>
+        <div class="produto-footer">
+          <div class="produto-preco">R$89,90</div>
+          <button class="produto-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho interesse no Whey Protein Isolado.','_blank')">
+            Quero esse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto-card" data-cat="vitaminas">
+      <div class="produto-img">🌿</div>
+      <div class="produto-info">
+        <div class="produto-categoria">Vitaminas</div>
+        <div class="produto-nome">Multivitamínico Completo</div>
+        <div class="produto-desc">Suporte diário de vitaminas e minerais essenciais para o metabolismo e imunidade.</div>
+        <div class="produto-footer">
+          <div class="produto-preco">R$54,90</div>
+          <button class="produto-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho interesse no Multivitamínico.','_blank')">
+            Quero esse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto-card" data-cat="recuperacao">
+      <div class="produto-img">💊</div>
+      <div class="produto-info">
+        <div class="produto-categoria">Recuperação</div>
+        <div class="produto-nome">Creatina Monohidratada</div>
+        <div class="produto-desc">Melhora performance, força e recuperação muscular. Uso seguro e amplamente comprovado.</div>
+        <div class="produto-footer">
+          <div class="produto-preco">R$69,90</div>
+          <button class="produto-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho interesse na Creatina.','_blank')">
+            Quero esse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto-card" data-cat="energia">
+      <div class="produto-img">⚡</div>
+      <div class="produto-info">
+        <div class="produto-categoria">Energia</div>
+        <div class="produto-nome">Pré-Treino Natural</div>
+        <div class="produto-desc">Fórmula sem estimulantes agressivos. Energia limpa e sustentada para o treino.</div>
+        <div class="produto-footer">
+          <div class="produto-preco">R$79,90</div>
+          <button class="produto-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho interesse no Pré-Treino.','_blank')">
+            Quero esse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto-card" data-cat="vitaminas">
+      <div class="produto-img">🌞</div>
+      <div class="produto-info">
+        <div class="produto-categoria">Vitaminas</div>
+        <div class="produto-nome">Vitamina D3 + K2</div>
+        <div class="produto-desc">Combo essencial para imunidade, saúde óssea e absorção de cálcio. Deficiência muito comum no Brasil.</div>
+        <div class="produto-footer">
+          <div class="produto-preco">R$44,90</div>
+          <button class="produto-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho interesse na Vitamina D3+K2.','_blank')">
+            Quero esse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto-card" data-cat="proteina">
+      <div class="produto-img">🥜</div>
+      <div class="produto-info">
+        <div class="produto-categoria">Proteína</div>
+        <div class="produto-nome">Pasta de Amendoim Integral</div>
+        <div class="produto-desc">Fonte natural de proteína e gordura boa. Sem açúcar adicionado, sem conservantes.</div>
+        <div class="produto-footer">
+          <div class="produto-preco">R$29,90</div>
+          <button class="produto-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho interesse na Pasta de Amendoim.','_blank')">
+            Quero esse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto-card" data-cat="recuperacao">
+      <div class="produto-img">🫐</div>
+      <div class="produto-info">
+        <div class="produto-categoria">Recuperação</div>
+        <div class="produto-nome">Ômega 3 DHA + EPA</div>
+        <div class="produto-desc">Anti-inflamatório natural, saúde cardiovascular e cerebral. Um dos suplementos mais importantes.</div>
+        <div class="produto-footer">
+          <div class="produto-preco">R$59,90</div>
+          <button class="produto-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho interesse no Ômega 3.','_blank')">
+            Quero esse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="produto-card" data-cat="energia">
+      <div class="produto-img">🍵</div>
+      <div class="produto-info">
+        <div class="produto-categoria">Energia</div>
+        <div class="produto-nome">Chá Verde Termogênico</div>
+        <div class="produto-desc">Termogênico natural com antioxidantes. Auxilia no metabolismo e na queima de gordura.</div>
+        <div class="produto-footer">
+          <div class="produto-preco">R$34,90</div>
+          <button class="produto-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho interesse no Chá Verde.','_blank')">
+            Quero esse
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="produtos-disclaimer" style="margin: 2.5rem auto 0; max-width: 680px;">
+    <span>💚</span>
+    Todos os produtos são indicados com base em evidências científicas e na experiência clínica da Gaby. A indicação personalizada é feita durante a consulta.
+  </div>
+</div>
+
+<!-- RODAPÉ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">Gaby <span>Maia</span></div>
+      <p class="footer-desc">Nutrição funcional e comportamental para quem quer resultados reais e duradouros.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Navegação</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Página inicial</a></li>
+        <li><a href="index.html#sobre">Sobre a Gaby</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="index.html#contato">Agendar consulta</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Atendimento</div>
+      <ul class="footer-links">
+        <li>📍 São Paulo — SP</li>
+        <li>💻 Online (Meet / Zoom)</li>
+        <li>⏰ Seg a Sex, 8h–18h</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Dúvidas sobre produtos?</div>
+      <p style="font-size:0.85rem;color:rgba(250,247,242,0.6);line-height:1.6;margin-bottom:1.2rem;">
+        Fale com a Gaby e receba uma indicação personalizada para o seu objetivo.
+      </p>
+      <button class="footer-btn" onclick="window.open('https://wa.me/5500000000000?text=Olá Gaby! Tenho dúvidas sobre os produtos.','_blank')">
+        💬 Falar no WhatsApp
+      </button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">© 2026 Gaby Maia Nutrição · CRN-3 Nº 00000</div>
+    <div class="footer-bottom-right">Desenvolvido com 💚 por <strong>Seu Nome</strong></div>
+  </div>
+</footer>
+
+<script>
+function filtrar(cat, btn) {
+  document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.produto-card').forEach(card => {
+    if (cat === 'todos' || card.dataset.cat === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

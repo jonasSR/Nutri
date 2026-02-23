@@ -1,0 +1,190 @@
+<!-- ── BLOCO DE CAPTAÇÃO ── -->
+<!-- Inserir DEPOIS dos depoimentos e ANTES do CTA final -->
+
+<section class="section" id="guia-gratis" style="background: linear-gradient(135deg, #f0f4ed 0%, #faf7f2 100%); border-radius: 32px; margin: 0 2rem 4rem; padding: 5rem 4rem;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;" class="reveal">
+
+    <!-- LADO ESQUERDO: MOCKUP DO GUIA -->
+    <div style="position: relative; display: flex; justify-content: center;">
+      <div style="
+        width: 240px; height: 320px;
+        background: linear-gradient(145deg, #8A9E7B 0%, #4A6B40 100%);
+        border-radius: 16px;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        box-shadow: 0 40px 80px rgba(26,22,18,0.2), -12px 12px 0 #C5D4BC;
+        padding: 2rem;
+        text-align: center;
+        color: white;
+        position: relative;
+        z-index: 2;
+      ">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🌿</div>
+        <div style="font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.75; margin-bottom: 0.5rem;">Guia Gratuito</div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.25rem; line-height: 1.3; font-weight: 700;">7 Dias para Desinchar</div>
+        <div style="width: 40px; height: 2px; background: rgba(255,255,255,0.4); margin: 1rem auto;"></div>
+        <div style="font-size: 0.75rem; opacity: 0.75; line-height: 1.5;">Cardápio + Lista de compras + Dicas práticas</div>
+        <div style="
+          position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%);
+          background: #C4785A; color: white;
+          padding: 0.4rem 1.2rem; border-radius: 100px;
+          font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em;
+          white-space: nowrap;
+        ">✦ 100% GRATUITO</div>
+      </div>
+
+      <!-- Elementos decorativos -->
+      <div style="
+        position: absolute; top: -20px; right: 30px;
+        background: white; border-radius: 12px;
+        padding: 0.7rem 1rem;
+        box-shadow: 0 12px 40px rgba(26,22,18,0.1);
+        font-size: 0.78rem; color: #2D2520;
+        animation: float 4s ease-in-out infinite;
+        z-index: 3;
+      ">
+        📥 <strong>+1.200</strong> downloads
+      </div>
+    </div>
+
+    <!-- LADO DIREITO: FORMULÁRIO -->
+    <div>
+      <div style="font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8A9E7B; margin-bottom: 1rem;">Grátis pra você</div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; line-height: 1.15; color: #1A1612; margin-bottom: 1rem;">
+        Baixe o guia e comece a <em style="font-style:italic; color: #C4785A;">desinchar hoje</em>
+      </h2>
+      <p style="color: #8A7F78; line-height: 1.7; font-size: 0.95rem; margin-bottom: 2rem;">
+        7 dias de cardápio simples, lista de compras completa e dicas que realmente funcionam. Sem fórmula mágica, só nutrição de verdade.
+      </p>
+
+      <div id="captacao-form">
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1rem;">
+          <input
+            id="cap-nome"
+            type="text"
+            placeholder="Seu nome"
+            style="
+              border: 1.5px solid rgba(138,158,123,0.3);
+              border-radius: 12px; padding: 0.9rem 1.2rem;
+              font-size: 0.9rem; font-family: 'DM Sans', sans-serif;
+              color: #2D2520; background: white; outline: none;
+              transition: border-color 0.2s;
+            "
+            onfocus="this.style.borderColor='#8A9E7B'"
+            onblur="this.style.borderColor='rgba(138,158,123,0.3)'"
+          >
+          <input
+            id="cap-email"
+            type="email"
+            placeholder="Seu melhor e-mail"
+            style="
+              border: 1.5px solid rgba(138,158,123,0.3);
+              border-radius: 12px; padding: 0.9rem 1.2rem;
+              font-size: 0.9rem; font-family: 'DM Sans', sans-serif;
+              color: #2D2520; background: white; outline: none;
+              transition: border-color 0.2s;
+            "
+            onfocus="this.style.borderColor='#8A9E7B'"
+            onblur="this.style.borderColor='rgba(138,158,123,0.3)'"
+          >
+        </div>
+
+        <button
+          onclick="handleCaptacao()"
+          style="
+            width: 100%;
+            background: linear-gradient(135deg, #8A9E7B 0%, #5A7A50 100%);
+            color: white; border: none; border-radius: 12px;
+            padding: 1rem; font-size: 0.95rem; font-weight: 500;
+            font-family: 'DM Sans', sans-serif;
+            cursor: pointer; transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(138,158,123,0.35);
+          "
+          onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(138,158,123,0.45)'"
+          onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 24px rgba(138,158,123,0.35)'"
+        >
+          🌿 Quero meu guia gratuito
+        </button>
+
+        <p style="font-size: 0.72rem; color: #8A7F78; text-align: center; margin-top: 0.8rem;">
+          🔒 Sem spam. Você pode cancelar quando quiser.
+        </p>
+      </div>
+
+      <!-- Estado de sucesso -->
+      <div id="captacao-success" style="display:none; text-align: center; padding: 2rem;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🎉</div>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #1A1612; margin-bottom: 0.5rem;">Chegou no seu e-mail!</h3>
+        <p style="color: #8A7F78; font-size: 0.9rem; line-height: 1.6;">Confira sua caixa de entrada. Nos próximos dias você também vai receber dicas exclusivas da Gaby 💚</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SCRIPT DE CAPTAÇÃO ── -->
+<!-- Dependências necessárias (adicionar no <head> do site principal):
+     Firebase: https://www.gstatic.com/firebasejs/10.x.x/firebase-app-compat.js
+               https://www.gstatic.com/firebasejs/10.x.x/firebase-firestore-compat.js
+     EmailJS:  https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js
+-->
+<script>
+  // ── CONFIGURAÇÕES (substituir com suas chaves) ──
+  const EMAILJS_PUBLIC_KEY  = 'SUA_PUBLIC_KEY_EMAILJS';
+  const EMAILJS_SERVICE_ID  = 'SUA_SERVICE_ID';
+  const EMAILJS_TEMPLATE_ID = 'SEU_TEMPLATE_ID'; // template do email com o PDF
+
+  // Firebase já deve estar inicializado no site principal
+  // const db = firebase.firestore(); // descomentar quando integrar
+
+  async function handleCaptacao() {
+    const nome  = document.getElementById('cap-nome').value.trim();
+    const email = document.getElementById('cap-email').value.trim();
+
+    if (!nome || !email) {
+      alert('Preencha nome e e-mail para receber o guia 😊');
+      return;
+    }
+
+    if (!validarEmail(email)) {
+      alert('Digite um e-mail válido!');
+      return;
+    }
+
+    try {
+      // 1. Salva no Firebase
+      // await db.collection('leads').add({
+      //   nome, email,
+      //   origem: 'guia_gratis',
+      //   data: firebase.firestore.FieldValue.serverTimestamp()
+      // });
+
+      // 2. Dispara email com o guia via EmailJS
+      // await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      //   to_name:  nome,
+      //   to_email: email,
+      //   pdf_link: 'https://SEU_LINK_DO_PDF_AQUI'
+      // }, EMAILJS_PUBLIC_KEY);
+
+      // Simulação (remover quando integrar de verdade)
+      await simularEnvio();
+
+      // 3. Mostra sucesso
+      document.getElementById('captacao-form').style.display    = 'none';
+      document.getElementById('captacao-success').style.display = 'block';
+
+    } catch (err) {
+      console.error(err);
+      alert('Ops, algo deu errado. Tente novamente!');
+    }
+  }
+
+  function validarEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  // Remover essa função quando integrar Firebase + EmailJS de verdade
+  function simularEnvio() {
+    return new Promise(resolve => setTimeout(resolve, 1200));
+  }
+</script>
