@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   registrarVisita();
 
   // Botões de WhatsApp — adicione data-whatsapp em todos
-  // Ex: <button data-whatsapp onclick="...">Falar com a Gaby</button>
+  // Ex: <button data-whatsapp onclick="...">Falar com a Patrícia</button>
   document.querySelectorAll('[data-whatsapp]').forEach(el => {
     el.addEventListener('click', () => {
       registrarWhatsapp();
@@ -124,4 +124,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Exporta pra usar no formulário de captação
-window.gabMetrics = { registrarLead, registrarWhatsapp, registrarAgendamento };
+window.patriciaMetrics = { registrarLead, registrarWhatsapp, registrarAgendamento };

@@ -5,7 +5,7 @@
 // ─────────────────────────────────────────
 // CONFIGURAÇÕES
 // ─────────────────────────────────────────
-const EMAIL_GABY = 'email_da_gaby@gmail.com'; // trocar
+const EMAIL_PATRICIA = 'email_da_patricia@gmail.com'; // trocar
 const SEU_NOME   = 'Seu Nome';
 const SEU_WPP    = '55119XXXXXXXX';
 
@@ -120,7 +120,7 @@ function gerarHTML({ totais, inicio, fim }) {
   <!-- BODY -->
   <div style="background:white;padding:32px;">
     <p style="font-size:15px;line-height:1.7;margin-bottom:24px;">
-      Oi, <strong style="color:#8A9E7B;">Gaby!</strong> Aqui está o resumo do seu site essa semana 💚
+      Oi, <strong style="color:#8A9E7B;">Patrícia Liah!</strong> Aqui está o resumo do seu site essa semana 💚
     </p>
 
     <!-- MÉTRICAS -->

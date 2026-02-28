@@ -17,11 +17,11 @@ const responses = {
     replies: ["Quero agendar!", "Quero o mensal", "Como funciona?"]
   },
   "como funciona": {
-    text: "É bem simples! Funciona assim:\n\n1️⃣ Você agenda sua consulta\n2️⃣ Preenche a anamnese antes\n3️⃣ Consulta de 1h com a Gaby\n4️⃣ Recebe seu plano alimentar\n5️⃣ Suporte contínuo pelo WhatsApp\n\nQuer agendar agora? 😊",
+    text: "É bem simples! Funciona assim:\n\n1️⃣ Você agenda sua consulta\n2️⃣ Preenche a anamnese antes\n3️⃣ Consulta de 1h com a Patrícia\n4️⃣ Recebe seu plano alimentar\n5️⃣ Suporte contínuo pelo WhatsApp\n\nQuer agendar agora? 😊",
     replies: ["Quero agendar!", "Quanto custa?", "Tem online?"]
   },
   "online": {
-    text: "Sim! A Gaby atende tanto online quanto presencial 💻\n\nO atendimento online é pelo Google Meet ou Zoom e funciona muito bem — você recebe tudo pelo digital mesmo, cardápio, orientações e suporte pelo WhatsApp.\n\nPrefere presencial ou online?",
+    text: "Sim! A Patrícia atende tanto online quanto presencial 💻\n\nO atendimento online é pelo Google Meet ou Zoom e funciona muito bem — você recebe tudo pelo digital mesmo, cardápio, orientações e suporte pelo WhatsApp.\n\nPrefere presencial ou online?",
     replies: ["Quero online", "Quero presencial", "Agendar agora"]
   },
   "presencial": {
@@ -33,35 +33,35 @@ const responses = {
     replies: ["Quero agendar!", "Ver planos"]
   },
   "primeira consulta": {
-    text: "Na primeira consulta a Gaby faz uma avaliação completa:\n\n🔍 Histórico alimentar\n🩺 Análise de exames\n🎯 Definição dos seus objetivos\n📋 Início do plano personalizado\n\nA consulta dura em torno de 1 hora e você já sai com orientações práticas!\n\nQuer agendar?",
+    text: "Na primeira consulta a Patrícia faz uma avaliação completa:\n\n🔍 Histórico alimentar\n🩺 Análise de exames\n🎯 Definição dos seus objetivos\n📋 Início do plano personalizado\n\nA consulta dura em torno de 1 hora e você já sai com orientações práticas!\n\nQuer agendar?",
     replies: ["Quero agendar!", "Quanto custa?", "Tem online?"]
   },
   "exames": {
-    text: "Não é obrigatório levar exames na primeira consulta, mas se você tiver exames recentes (hemograma, glicemia, colesterol, tireoide) é bem-vindo trazer 📄\n\nA Gaby analisa tudo e adapta o plano de acordo com seus resultados.\n\nQuer agendar?",
+    text: "Não é obrigatório levar exames na primeira consulta, mas se você tiver exames recentes (hemograma, glicemia, colesterol, tireoide) é bem-vindo trazer 📄\n\nA Patrícia analisa tudo e adapta o plano de acordo com seus resultados.\n\nQuer agendar?",
     replies: ["Quero agendar!", "Como funciona?"]
   },
   "emagrecer": {
-    text: "Esse é um dos focos principais da Gaby! 💪\n\nO diferencial aqui é que o emagrecimento é feito de forma saudável e sustentável — sem passar fome, sem cortar tudo que você gosta.\n\nMuitas pacientes relatam resultados já nas primeiras semanas, com mais energia e disposição também.\n\nQuer começar?",
+    text: "Esse é um dos focos principais da Patrícia! 💪\n\nO diferencial aqui é que o emagrecimento é feito de forma saudável e sustentável — sem passar fome, sem cortar tudo que você gosta.\n\nMuitas pacientes relatam resultados já nas primeiras semanas, com mais energia e disposição também.\n\nQuer começar?",
     replies: ["Quero agendar!", "Quanto custa?", "Ver resultados"]
   },
   "ganhar massa": {
-    text: "A Gaby também atende quem quer ganhar massa muscular! 💪\n\nO plano inclui adequação calórica, timing de proteínas, sugestão de suplementação e ajustes conforme sua evolução nos treinos.\n\nVocê treina ou vai começar agora?",
+    text: "A Patrícia também atende quem quer ganhar massa muscular! 💪\n\nO plano inclui adequação calórica, timing de proteínas, sugestão de suplementação e ajustes conforme sua evolução nos treinos.\n\nVocê treina ou vai começar agora?",
     replies: ["Já treino", "Vou começar", "Quanto custa?"]
   },
   "treino": {
-    text: "Perfeito! Com o treino já em andamento, o plano nutricional fica ainda mais eficiente 🏋️\n\nA Gaby vai sincronizar a alimentação com sua rotina de treinos para maximizar os resultados. Quer agendar?",
+    text: "Perfeito! Com o treino já em andamento, o plano nutricional fica ainda mais eficiente 🏋️\n\nA Patrícia vai sincronizar a alimentação com sua rotina de treinos para maximizar os resultados. Quer agendar?",
     replies: ["Quero agendar!", "Quanto custa?"]
   },
   "diabetes": {
-    text: "Sim, a Gaby tem experiência com nutrição para diabéticos e pré-diabéticos 🩺\n\nO acompanhamento nutricional faz uma diferença enorme no controle glicêmico — muitos pacientes conseguem reduzir medicação com orientação médica após o acompanhamento.\n\nQuer agendar uma consulta?",
+    text: "Sim, a Patrícia tem experiência com nutrição para diabéticos e pré-diabéticos 🩺\n\nO acompanhamento nutricional faz uma diferença enorme no controle glicêmico — muitos pacientes conseguem reduzir medicação com orientação médica após o acompanhamento.\n\nQuer agendar uma consulta?",
     replies: ["Quero agendar!", "Como funciona?", "Quanto custa?"]
   },
   "pos parto": {
-    text: "A nutrição pós-parto é super delicada e a Gaby tem muito cuidado com esse momento 👶\n\nO plano leva em conta a amamentação, a recuperação do corpo e o emagrecimento saudável sem comprometer sua energia e a produção de leite.\n\nQuer conversar com a Gaby sobre isso?",
+    text: "A nutrição pós-parto é super delicada e a Patrícia tem muito cuidado com esse momento 👶\n\nO plano leva em conta a amamentação, a recuperação do corpo e o emagrecimento saudável sem comprometer sua energia e a produção de leite.\n\nQuer conversar com a Patrícia sobre isso?",
     replies: ["Quero agendar!", "Quanto custa?"]
   },
   "crianca": {
-    text: "A Gaby atende nutrição infantil sim! 👧👦\n\nA consulta é feita com os pais e a abordagem é sempre lúdica e sem pressão — o objetivo é criar uma relação saudável com a comida desde cedo.\n\nQuer saber mais?",
+    text: "A Patrícia atende nutrição infantil sim! 👧👦\n\nA consulta é feita com os pais e a abordagem é sempre lúdica e sem pressão — o objetivo é criar uma relação saudável com a comida desde cedo.\n\nQuer saber mais?",
     replies: ["Quero agendar!", "Quanto custa?", "Como funciona?"]
   },
   "resultado": {
@@ -69,26 +69,26 @@ const responses = {
     replies: ["Quero agendar!", "Quanto custa?"]
   },
   "whatsapp": {
-    text: "Que ótimo! Vou te redirecionar para o WhatsApp da Gaby agora 🎉\n\nEla responde rápido e vai confirmar o horário disponível.\n\nAté já! 💚",
+    text: "Que ótimo! Vou te redirecionar para o WhatsApp da Patrícia agora 🎉\n\nEla responde rápido e vai confirmar o horário disponível.\n\nAté já! 💚",
     replies: [],
-    action: () => window.open('https://wa.me/5500000000000?text=Olá Gaby! Quero agendar minha consulta!', '_blank')
+    action: () => window.open('https://wa.me/5500000000000?text=Olá Patrícia! Quero agendar minha consulta!', '_blank')
   },
   "agendar": {
-    text: "Que ótimo! Vou te redirecionar para o WhatsApp da Gaby agora 🎉\n\nEla vai confirmar o horário disponível e te enviar o link do formulário de anamnese.\n\nAté já!",
+    text: "Que ótimo! Vou te redirecionar para o WhatsApp da Patrícia agora 🎉\n\nEla vai confirmar o horário disponível e te enviar o link do formulário de anamnese.\n\nAté já!",
     replies: [],
-    action: () => window.open('https://wa.me/5500000000000?text=Olá Gaby! Quero agendar minha consulta!', '_blank')
+    action: () => window.open('https://wa.me/5500000000000?text=Olá Patrícia! Quero agendar minha consulta!', '_blank')
   },
   "voltar": {
     text: "Claro! O que você gostaria de saber? 😊",
     replies: ["Quanto custa?", "Como funciona?", "Tem atendimento online?", "Quero agendar!"]
   },
   "default": {
-    text: "Entendi! Para tirar essa dúvida com mais detalhes, o melhor é falar diretamente com a Gaby 😊\n\nEla responde rápido pelo WhatsApp!",
+    text: "Entendi! Para tirar essa dúvida com mais detalhes, o melhor é falar diretamente com a Patrícia 😊\n\nEla responde rápido pelo WhatsApp!",
     replies: ["Falar no WhatsApp", "Quanto custa?", "Como funciona?"]
   }
 };
 
-const welcomeMessage = "Olá! 🌿 Sou a Ana, assistente da Gaby Maia.\n\nPosso te ajudar com informações sobre consultas, valores e como funciona o atendimento. O que você gostaria de saber?";
+const welcomeMessage = "Olá! 🌿 Sou a Ana, assistente da Patrícia Maia.\n\nPosso te ajudar com informações sobre consultas, valores e como funciona o atendimento. O que você gostaria de saber?";
 
 const initialReplies = ["Quanto custa?", "Como funciona?", "Quero emagrecer", "Quero agendar!"];
 
